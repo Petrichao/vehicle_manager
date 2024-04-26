@@ -3,17 +3,8 @@ import math
 
 
 class Vehicle:
-    def __init__(
-            self,
-            name,
-            model,
-            year,
-            color,
-            price,
-            latitude,
-            longitude,
-            id=None
-            ) -> None:
+    def __init__(self, name, model, year, color,
+                 price, latitude, longitude, id=None) -> None:
         self.id = id
         self.name = name
         self.model = model

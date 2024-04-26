@@ -79,14 +79,14 @@ class VehicleManager:
     def filter_vehicles(self, params) -> list[Vehicle]:
         all_vehicles = self.get_vehicles()
         result = [vehicle for vehicle in all_vehicles if
-                  (not 'id' in params or vehicle.id == params['id']) and
-                  (not 'name' in params or vehicle.name == params['name']) and
-                  (not 'model' in params or vehicle.model == params['model']) and
-                  (not 'year' in params or vehicle.year == params['year']) and
-                  (not 'color' in params or vehicle.color == params['color']) and
-                  (not 'price' in params or vehicle.price == params['price']) and
-                  (not 'latitude' in params or vehicle.latitude == params['latitude']) and
-                  (not 'longitude' in params or vehicle.longitude == params['longitude'])
+                  ('id' not in params or vehicle.id == params['id']) and
+                  ('name' not in params or vehicle.name == params['name']) and
+                  ('model' not in params or vehicle.model == params['model']) and
+                  ('year' not in params or vehicle.year == params['year']) and
+                  ('color' not in params or vehicle.color == params['color']) and
+                  ('price' not in params or vehicle.price == params['price']) and
+                  ('latitude' not in params or vehicle.latitude == params['latitude']) and
+                  ('longitude' not in params or vehicle.longitude == params['longitude'])
                   ]
         return result
 
